@@ -1,11 +1,10 @@
 const express = require("express");
-const path = require("path");
-const PORT = 8080;
+require("dotenv").config();
 const app = express();
-
-
 
 app.get("*", (req, res) => {
     res.send("Hello")
 });
+
+const PORT = process.env.PORT;
 app.listen(PORT);
